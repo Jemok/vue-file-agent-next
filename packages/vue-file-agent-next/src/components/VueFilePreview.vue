@@ -59,15 +59,6 @@
       </span>
       <span class="file-ext">{{ fileRecord.ext() }}</span>
       <span class="file-size">{{ fileRecord.size() }}</span>
-      <span
-        v-if="deletable"
-        class="file-delete"
-        @click="removeFileRecord(fileRecord)"
-        @touchstart="filenameClearPressed()"
-        @mousedown="filenameClearPressed()"
-      >
-        <VueFileIcon name="system-close" />
-      </span>
       <span class="file-name" @click="editFileName()">
         <input
           v-if="editable === true"
