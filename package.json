@@ -1,5 +1,9 @@
 {
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
@@ -12,7 +16,6 @@
     "prepare": "husky install && turbo run build"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "release-please": "^14.1.0",
